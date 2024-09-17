@@ -1,0 +1,10 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if Current.session %>
+<p>You are <%= Current.user.email_address %></p>
+<%= link_to 'Logout', logout_path %>
+<% else %>
+<p>You are not logged in.</p>
+<%= link_to 'Login', new_session_path %>
+<% end %>
